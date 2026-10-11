@@ -15,9 +15,9 @@ This repository documents the method: why it exists, how it works, the rules tha
 | | |
 |---|---|
 | Running since | May 2026 |
-| Client environments | 61, across about ten industry clusters |
+| Client environments | 60+, across about ten industry clusters |
 | Cadence briefs delivered | 107 decks, with 98 written records and 96 workbooks |
-| Alerts analyzed | 1.85 million |
+| Alerts analyzed | 2+ million |
 | MDR escalation cases reconciled | 909 |
 | Priority findings tracked across cycles | 324, of which about one in three came back in a later cycle |
 | Specification versions | 22, each archived with a dated reason for the change |
