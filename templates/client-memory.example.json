@@ -1,0 +1,92 @@
+{
+  "_comment": "Fictional example. 'ExampleCo' and every value below are invented to show the shape of a client memory file.",
+  "client": "ExampleCo Manufacturing",
+  "client_short": "ExampleCo",
+  "vertical": "Industrial manufacturing",
+  "service_tier": "MDR Elite",
+  "cadences": [
+    {
+      "date": "2026-01-15",
+      "window": "2025-12-15/2026-01-14",
+      "alerts": 4210,
+      "assets": 860,
+      "noise": 2950,
+      "noise_share": 0.70,
+      "true_positives": 1260,
+      "priority_incidents": 3,
+      "undefined_verdicts": 337,
+      "unmitigated_high_critical": 0,
+      "posture_score": {
+        "total": 72,
+        "containment": 22.5,
+        "verdict_hygiene": 13.8,
+        "noise_trend": 10,
+        "follow_through": null,
+        "exposure": 11
+      },
+      "service_delivered": {
+        "alerts_in_window": 4210,
+        "closed_without_escalation": 4021,
+        "escalated": 189,
+        "tickets": 6,
+        "cases_matched": 6,
+        "handled_share": 0.955,
+        "hunts_logged": 2,
+        "proactive_log": true
+      }
+    }
+  ],
+  "findings": [
+    {
+      "id": "ExampleCo-202601-P1",
+      "type": "priority",
+      "title": "Credential dumping attempt on a file server",
+      "severity": "HIGH",
+      "attack": ["T1003.001"],
+      "hosts": ["FS-EXAMPLE-01"],
+      "first_seen": "2026-01-15",
+      "last_seen": "2026-01-15",
+      "occurrences": 1,
+      "status": "open"
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "ExampleCo-202601-A1",
+      "lane": "client",
+      "action": "Enable LSA protection on file servers and rotate the service account seen in the alert",
+      "raised": "2026-01-15",
+      "owner": "Client IT - Identity",
+      "timeline": "Week 1",
+      "expected_outcome": "Credential-dumping path closed on the affected server class",
+      "status": "open",
+      "closed": null
+    }
+  ],
+  "exposure": [
+    {
+      "id": "ExampleCo-202601-E1",
+      "category": "Brand abuse",
+      "finding": "Lookalike domain registered with an active mail record",
+      "confidence": "Probable",
+      "criticality": "High",
+      "collected": "2026-01-14",
+      "linked_inside_detection": null,
+      "status": "open"
+    }
+  ],
+  "escalations": [
+    {
+      "case_number": "00000001",
+      "cadence": "2026-01-15",
+      "hosts": ["FS-EXAMPLE-01"],
+      "detection_type": "Credential Dumping",
+      "priority": "P2",
+      "outcome": "Contained by MDR; hardening awaiting client confirmation",
+      "linked_finding": "ExampleCo-202601-P1"
+    }
+  ],
+  "notes": [
+    "chain-stages 2026-01: recon (none) cred-access (P1) - single stage, not elevated"
+  ]
+}
